@@ -1,4 +1,4 @@
-<h1>Инструкция по установке</h1>
+<h1>Инструкция по запуску</h1>
 
 ```shell
 git clone https://github.com/Bialri/Test_task.git
@@ -50,8 +50,27 @@ DEFAULT_AUTO_FIELD=django.db.models.BigAutoField
 ```
 Требуемые поля: поля конфигурации базы данных, при отстутсвии остальных запуск возможен.
 
+<p>Запуск контейнера с базой данных</p>
+
+```shell
+docker-compose up
+```
+
+<p>Применение миграций</p>
+
+```shell
+python3 manage.py makemigrations && python3 manage.py migrate
+```
+
 <p>Запуск dev сервера</p>
 
 ```shell
 docker-compose up && python3 manage.py runserver
+```
+
+<h2>Запуск тестов</h2>
+ для запуска тестов требуется работающий контейнер базы данных
+
+```shell
+python3 manage.py test
 ```
