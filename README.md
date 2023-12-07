@@ -53,7 +53,7 @@ DEFAULT_AUTO_FIELD=django.db.models.BigAutoField
 <p>Запуск контейнера с базой данных</p>
 
 ```shell
-docker-compose up
+docker-compose up -d
 ```
 
 <p>Применение миграций</p>
@@ -65,7 +65,7 @@ python3 manage.py makemigrations && python3 manage.py migrate
 <p>Запуск dev сервера</p>
 
 ```shell
-docker-compose up && python3 manage.py runserver
+python3 manage.py runserver
 ```
 
 <h2>Запуск тестов</h2>
