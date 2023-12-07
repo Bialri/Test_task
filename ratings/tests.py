@@ -108,6 +108,6 @@ class ComicTestCase(TestCase):
 
     def test_get_not_existing_comic(self):
         client = APIClient()
-        not_existing_comic_id= 100
+        not_existing_comic_id = 100
         response = client.get(f'/api/comics/{not_existing_comic_id}/rating/')
         self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)

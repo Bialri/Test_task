@@ -3,6 +3,9 @@ from ratings.models import Rating, Comic
 
 
 class RatingSerializer(serializers.ModelSerializer):
+    """
+    Сериализатор рейтинга
+    """
     id = serializers.IntegerField(read_only=True)
 
     class Meta:
@@ -11,6 +14,9 @@ class RatingSerializer(serializers.ModelSerializer):
 
 
 class ComicSerializer(serializers.ModelSerializer):
+    """
+    Сериализатор комикса
+    """
     class Meta:
         model = Comic
         fields = ('rating',)
